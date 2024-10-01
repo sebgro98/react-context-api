@@ -9,7 +9,7 @@ const MyContext = createContext();
 
 function App() {
     const [tweets, setTweets] = useState(defaultTweets)
-    const [theme, setTheme] = useState( () => { return localStorage.getItem("key") || 'light'});
+    const [theme, setTheme] = useState(localStorage.getItem("key"));
 
     useEffect(() => {
         if(localStorage.length === 0) {
